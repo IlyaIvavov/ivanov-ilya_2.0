@@ -1,3 +1,5 @@
+/* Specification */
+
 @font-face {
     font-family: 'Gilroy';
     src: url('../fonts/Gilroy-UltraLight.eot');
@@ -69,13 +71,68 @@ body {
 	font-family: 'Gilroy';
 }
 
+h1, h2 {
+    font-size: 70px;
+    font-weight: 700;
+    line-height: 85px;
+}
+
+ul, li, ol {
+	display: block;
+    font-weight: 200;
+    font-size: 20px;
+    line-height: 28px;
+}
+
+p {
+	display: block;
+    font-weight: 200;
+    font-size: 20px;
+    line-height: 28px;
+}
+
+a {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 23px;
+	text-decoration: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+.section {
+    width: 100vw;
+    height: 100vh;
+}
+
 .container {
     width: 90vw;
     height: 100%;
     margin: 0 auto;
 }
 
+.heading-span {
+    font-size: 50px;
+    font-weight: 250;
+    line-height: 57px;
+}
+
+button,
+button:hover,
+button:focus {
+	font-family: inherit;
+	outline: none;
+	border: none;
+    border-radius: 100px;
+    border: 2px solid;
+    border-color: #FFFFFF26;
+    cursor: pointer;
+}
+
 /* Swiper */
+
 
 
 /* Nav */
