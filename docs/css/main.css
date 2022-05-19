@@ -69,12 +69,16 @@ body {
 	font-family: 'Gilroy';
 }
 
+.container {
+    width: 90vw;
+    height: 100%;
+    margin: 0 auto;
+}
+
 /* Swiper */
 
 
-
 /* Nav */
-
 
 
 /* Offer */
