@@ -75,6 +75,15 @@ pageSlider.init();
 // Mobile Swipers
 
 let firstMobSlider = new Swiper('.first-mob-slider', {
+	wrapperClass: "first-mob-slider__wrapper",
+	slideClass: "first-mob-slider__slide",
+	slidesPerView: 'auto',
+	slidesPerView: true,
+	speed: 800,
+	observer: true,
+	observeParents: true,
+	observeSlideChildren: true,
+
 	scrollbar: {
 		el: '.swiper-scrollbar',
 		draggable: true,
