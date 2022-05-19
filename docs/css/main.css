@@ -362,13 +362,8 @@ button:focus {
     margin-bottom: 12px;
 }
 
-.offer-heading_mobile {
+.offer-mobile {
     display: none;
-}
-
-.offer-title_mobile {
-    display: flex;
-    flex-direction: column;
 }
 
 /* About */
@@ -440,16 +435,20 @@ button:focus {
         flex-direction: unset !important;
     }
 
-    .offer-heading {
-        left: 0;
+    .offer {
         display: none;
     }
 
-    .offer-title__span_busines {
-        display: none;
-    }
-
-    .offer-heading_mobile {
+    .offer-mobile {
         display: block;
+    }
+
+    .offer-title_mobile {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .first-mob-slider {
+        width: 100vh;
     }
 }

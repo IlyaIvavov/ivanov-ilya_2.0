@@ -71,3 +71,13 @@ function menuSliderRemove() {
 }
 
 pageSlider.init();
+
+// Mobile Swipers
+
+let firstMobSlider = new Swiper('.first-mob-slider', {
+	scrollbar: {
+		el: '.swiper-scrollbar',
+		draggable: true,
+	},
+	grabCursor: true,
+});
