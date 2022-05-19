@@ -6,6 +6,7 @@ let pageSlider = new Swiper('.page', {
 	direction: 'vertical',
 	slidesPerView: 'auto',
 	slidesPerView: true,
+	parallax: true,
 
 	keyboard: {
 		enabled: true,
@@ -29,5 +30,44 @@ let pageSlider = new Swiper('.page', {
 		clickable: true,
 		bulletClass: "section__bullet",
 		bulletActiveClass: "section__bullet_active",
-	}
+	},
+
+	init: false,
+
+	on: {
+		init: function () {
+			menuSlider();
+		},
+
+		slideChange: function () {
+			menuSliderRemove();
+			menuLinks[pageSlider.realIndex].classList.add('active');
+		}
+	},
 });
+
+let menuLinks = document.querySelectorAll('.nav-menu__item');
+
+function menuSlider() {
+	if (menuLinks.length > 0) {
+		menuLinks[pageSlider.realIndex].classList.add('active');
+		for (let index = 0; index < menuLinks.length; index++) {
+			const menuLink = menuLinks[index];
+			menuLink.addEventListener("click", function (e) {
+				menuSliderRemove();
+				pageSlider.slideTo(index, 800);
+				menuLink.classList.add('active');
+				e.preventDefault();
+			});
+		}
+	}
+}
+ 
+function menuSliderRemove() {
+	let menuLinkActive = document.querySelector('.nav-menu__item.active');
+	if (menuLinkActive) {
+		menuLinkActive.classList.remove('active');
+	}
+}
+
+pageSlider.init();

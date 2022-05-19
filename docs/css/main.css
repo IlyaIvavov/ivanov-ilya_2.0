@@ -72,34 +72,34 @@ body {
 }
 
 h1, h2 {
-    font-size: 70px;
+    font-size: calc(29px + 41 * (100vw / 1920));
     font-weight: 700;
-    line-height: 85px;
 }
 
 ul, li, ol {
 	display: block;
     font-weight: 200;
     font-size: 20px;
-    line-height: 28px;
 }
 
 p {
 	display: block;
     font-weight: 200;
     font-size: 20px;
-    line-height: 28px;
 }
 
 a {
     font-size: 20px;
     font-weight: 400;
-    line-height: 23px;
 	text-decoration: none;
 }
 
 img {
     vertical-align: top;
+}
+
+#s2 {
+    object-position: top;
 }
 
 .section {
@@ -116,7 +116,6 @@ img {
 .heading-span {
     font-weight: 200;
     font-size: 50px;
-    line-height: 57px;
     color: rgba(255, 255, 255, 0.5);
 }
 
@@ -251,19 +250,72 @@ button:focus {
 
 /* Nav */
 
-.nav-menu {
-
+.header {
+    position: fixed;
+    top: 47px;
+    left: 0;
+    z-index: 2;
+    width: 100%;
 }
 
-.nav-links {
+.nav-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu {
     display: flex;
     align-items: baseline;
 }
 
-.nav-links__item {
+.nav-menu__item {
     font-size: 20px;
     font-weight: 400;
-    line-height: 23px;
+    color: rgba(255, 255, 255, 0.3);
+    transition: color 0.3s ease-in;
+}
+
+.nav-menu__item:hover {
+    color: rgba(255, 255, 255, 0.6);
+    transition: color 0.3s ease-out;
+}
+
+.nav-menu__item:not(:last-child) {
+    margin-right: 33px;
+}
+
+.nav-menu__item.active {
+    color: rgba(255, 255, 255, 0.6);
+    transition: color 0.3s ease-in;
+}
+
+.nav-media {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-left: 43px;
+}
+
+.nav-media a {
+    margin-left: 33px;
+    display: flex;
+    opacity: 30%;
+    transition: all 0.3s ease-in;
+}
+
+.nav-media a:hover {
+    opacity: 60%;
+    transition: all 0.3s ease-out;
+}
+
+.nav-media::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
 }
 
 /* Offer */
@@ -279,14 +331,12 @@ button:focus {
 .offer-title__span_name {
     font-weight: 800;
     font-size: 87px;
-    line-height: 107px;
 }
 
 .offer-title__span_busines {
     writing-mode: vertical-rl;
     font-weight: 200;
     font-size: 70px;
-    line-height: 80px;
     padding-top: 0.8%;
     color: rgba(255, 255, 255, 0.5);
 }
@@ -309,7 +359,16 @@ button:focus {
 }
 
 .offer-description__item:not(:last-child) {
-    margin-bottom: 4px;
+    margin-bottom: 12px;
+}
+
+.offer-heading_mobile {
+    display: none;
+}
+
+.offer-title_mobile {
+    display: flex;
+    flex-direction: column;
 }
 
 /* About */
@@ -341,3 +400,56 @@ button:focus {
 
 
 /* CSS Animation */
+
+@media (max-width: 767px) {
+    h1, h2 {
+        font-size: calc(29px + (41 + 41 * 0.7) * ((100vw - 320px) / 1920));
+    }
+
+    ul, li, ol {
+        font-size: calc(15px + (20 + 20 * 0.7) * ((100vw - 320px) / 1920));
+    }
+    
+    p {
+        font-size: calc(15px + (20 + 20 * 0.7) * ((100vw - 320px) / 1920));
+    }
+    
+    a {
+        font-size: calc(15px + (20 + 20 * 0.7) * ((100vw - 320px) / 1920));
+    }
+
+    .heading-span {
+        font-size: calc(21px + (50 + 50 * 0.7) * ((100vw - 320px) / 1920));
+    }
+
+    .nav-menu__item {
+        font-size: calc(15px + (20 + 20 * 0.7) * ((100vw - 320px) / 1920));
+    }
+
+    .offer-title__span_name {
+        font-size: calc(36px + (87 + 87 * 0.7) * ((100vw - 320px) / 1920));
+    }
+
+    .container {
+        width: 92vw;
+    }
+
+    .section__pagination {
+        top: 95% !important;
+        left: 3%;
+        flex-direction: unset !important;
+    }
+
+    .offer-heading {
+        left: 0;
+        display: none;
+    }
+
+    .offer-title__span_busines {
+        display: none;
+    }
+
+    .offer-heading_mobile {
+        display: block;
+    }
+}
