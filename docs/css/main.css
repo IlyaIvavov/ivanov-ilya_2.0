@@ -129,16 +129,22 @@ img {
     color: rgba(255, 255, 255, 0.5);
 }
 
-button,
-button:hover,
-button:focus {
+button {
 	font-family: inherit;
 	outline: none;
 	border: none;
-    border-radius: 100px;
-    border: 2px solid;
-    border-color: #FFFFFF26;
+    background: none;
     cursor: pointer;
+    display: inherit;
+    font-weight: 300;
+    font-size: calc(15px + 5 * (100vw / 1920));
+    color: rgba(255, 255, 255, 0.4);
+    transition: color 0.3s ease-in;
+}
+
+button:hover {
+    color: rgba(255, 255, 255, 1);
+    transition: color 0.3s ease-out;
 }
 
 /* Swiper */
@@ -381,10 +387,10 @@ button:focus {
     margin-bottom: 13px;
 }
 
-.swiper {
+.offer-mobile__slider {
     width: calc(100vw - 32px);
     height: auto;
-  }
+}
 
 .scrollbar {
     width: 95%;
@@ -449,12 +455,94 @@ button:focus {
 
 .about-description__item a:hover {
     color: rgba(255, 255, 255, 1);
-    transition: color 0.3s ease-in;
+    transition: color 0.3s ease-out;
 }
 
-/* My Project */
+.about-description__item span {
+    font-weight: 300;
+}
 
+/* Projects */
 
+.projects__title {
+    margin-bottom: 24px;
+}
+
+.projects-wrapper {
+    display: flex;
+}
+
+.projects-wrapper__col:not(:last-child) {
+    margin-right: 33px;
+}
+
+.projects-name {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-left: 13px;
+    margin-bottom: 33px;
+}
+
+.projects-name::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.2);
+    width: 2px;
+    height: 100%;
+}
+
+.projects-name__title {
+    font-weight: 400;
+    margin-bottom: 3px;
+}
+
+.projects-name__title span {
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.projects-name__description {
+    margin-bottom: 3px;
+}
+
+.projects-stats {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-left: 13px;
+}
+
+.projects-stats::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.2);
+    width: 2px;
+    height: 100%;
+}
+
+.projects-stats__title {
+    font-weight: 200;
+    margin-bottom: 5px;
+}
+
+.projects-stats__title span {
+    font-weight: 200;
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.projects-mobile-slider {
+    display: none;
+}
+
+.projects-mobile-slider {
+    width: calc(100vw - 32px);
+    height: auto;
+}
 
 /* Learning */
 
@@ -595,5 +683,15 @@ button:focus {
     .offer-title_mobile {
         display: flex;
         flex-direction: column;
+    }
+
+    /* Projects */
+
+    .projects-wrapper {
+        display: none;
+    }
+
+    .projects-mobile-slider {
+        display: block;
     }
 }
