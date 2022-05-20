@@ -1,5 +1,3 @@
-/* Specification */
-
 @font-face {
     font-family: 'Gilroy';
     src: url('/fonts/Gilroy-UltraLight.eot');
@@ -245,6 +243,57 @@ button:focus {
     align-items: flex-start;
     flex-direction: column;
     justify-content: center;
+}
+
+/* Offer-mobile */
+
+.offer-mobile {
+    display: none;
+}
+
+.offer-heading_mobile {
+    margin-bottom: 13px;
+}
+
+.swiper {
+    width: calc(100vw - 32px);
+    height: auto;
+  }
+
+.scrollbar {
+    width: 95%;
+    height: 2px;
+    margin-top: 13px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+
+.scrollbar-drag {
+    width: 339.5px;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+
+.offer-description_mobile {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-left: 16px;
+}
+
+.offer-description_mobile::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.offer-description_mobile__item:not(:last-child) {
+    margin-bottom: 13px;
 }
 
 

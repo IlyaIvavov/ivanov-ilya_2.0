@@ -74,19 +74,12 @@ pageSlider.init();
 
 // Mobile Swipers
 
-let firstMobSlider = new Swiper('.first-mob-slider', {
-	wrapperClass: "first-mob-slider__wrapper",
-	slideClass: "first-mob-slider__slide",
-	slidesPerView: 'auto',
-	slidesPerView: true,
-	speed: 800,
-	observer: true,
-	observeParents: true,
-	observeSlideChildren: true,
-
+let firstMobSlider = new Swiper('.swiper', {
 	scrollbar: {
-		el: '.swiper-scrollbar',
+		el: '.scrollbar',
+		dragClass: 'scrollbar-drag',
 		draggable: true,
 	},
 	grabCursor: true,
+	spaceBetween: 16,
 });
