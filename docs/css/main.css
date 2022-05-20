@@ -694,4 +694,8 @@ button:hover {
     .projects-mobile-slider {
         display: block;
     }
+
+    .projects-name {
+        margin-bottom: 23px;
+    }
 }
