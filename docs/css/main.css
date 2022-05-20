@@ -77,17 +77,25 @@ h1, h2 {
 ul, li, ol {
 	display: block;
     font-weight: 200;
-    font-size: 20px;
+    font-size: calc(15px + 5 * (100vw / 1920));
+}
+
+li:not(:last-child) {
+	margin-bottom: 13px;
 }
 
 p {
 	display: block;
     font-weight: 200;
-    font-size: 20px;
+    font-size: calc(15px + 5 * (100vw / 1920));
+}
+
+p:not(:last-child) {
+	margin-bottom: 13px;
 }
 
 a {
-    font-size: 20px;
+    font-size: calc(15px + 5 * (100vw / 1920));
     font-weight: 400;
 	text-decoration: none;
 }
@@ -98,6 +106,10 @@ img {
 
 #s2 {
     object-position: top;
+}
+
+#s6 {
+    object-position: bottom;
 }
 
 .section {
@@ -113,7 +125,7 @@ img {
 
 .heading-span {
     font-weight: 200;
-    font-size: 50px;
+    font-size: calc(21px + 29 * (100vw / 1920));
     color: rgba(255, 255, 255, 0.5);
 }
 
@@ -177,7 +189,7 @@ button:focus {
     width: 10px;
     height: 10px;
     cursor: pointer;
-    background: linear-gradient(107.15deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(107.15deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
     backdrop-filter: blur(50px);
     margin: 10px;
     border-radius: 50%;
@@ -185,7 +197,7 @@ button:focus {
 }
 
 .section__bullet_active {
-    background: linear-gradient(107.15deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(107.15deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
     backdrop-filter: blur(50px);
     width: 15px;
     height: 15px;
@@ -245,7 +257,6 @@ button:focus {
     justify-content: center;
 }
 
-
 /* Nav */
 
 .header {
@@ -267,7 +278,7 @@ button:focus {
 }
 
 .nav-menu__item {
-    font-size: 20px;
+    font-size: calc(15px + 5 * (100vw / 1920));
     font-weight: 400;
     color: rgba(255, 255, 255, 0.3);
     transition: color 0.3s ease-in;
@@ -332,13 +343,13 @@ button:focus {
 
 .offer-title__span_name {
     font-weight: 800;
-    font-size: 87px;
+    font-size: calc(36px + 51 * (100vw / 1920));
 }
 
 .offer-title__span_busines {
     writing-mode: vertical-rl;
     font-weight: 200;
-    font-size: 70px;
+    font-size: calc(29px + 41 * (100vw / 1920));
     padding-top: 0.8%;
     color: rgba(255, 255, 255, 0.5);
 }
@@ -358,10 +369,6 @@ button:focus {
     width: 2px;
     height: 100%;
     background: rgba(255, 255, 255, 0.2);
-}
-
-.offer-description__item:not(:last-child) {
-    margin-bottom: 12px;
 }
 
 /* Offer-mobile */
@@ -411,13 +418,39 @@ button:focus {
     background: rgba(255, 255, 255, 0.2);
 }
 
-.offer-description_mobile__item:not(:last-child) {
-    margin-bottom: 13px;
-}
-
 /* About */
 
+.about__title {
+    margin-bottom: 23px;
+}
 
+.about-description {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-left: 13px;
+}
+
+.about-description::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.2);
+    width: 2px;
+    height: 100%;
+}
+
+.about-description__item a {
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.5);
+    transition: color 0.3s ease-in;
+}
+
+.about-description__item a:hover {
+    color: rgba(255, 255, 255, 1);
+    transition: color 0.3s ease-in;
+}
 
 /* My Project */
 
@@ -516,27 +549,27 @@ button:focus {
     }
 
     ul, li, ol {
-        font-size: calc(15px + (20 + 20 * 0.7) * ((100vw - 320px) / 1920));
+        font-size: calc(15px + (5 + 5 * 0.7) * ((100vw - 320px) / 1920));
     }
     
     p {
-        font-size: calc(15px + (20 + 20 * 0.7) * ((100vw - 320px) / 1920));
+        font-size: calc(15px + (5 + 5 * 0.7) * ((100vw - 320px) / 1920));
     }
     
     a {
-        font-size: calc(15px + (20 + 20 * 0.7) * ((100vw - 320px) / 1920));
+        font-size: calc(15px + (5 + 5 * 0.7) * ((100vw - 320px) / 1920));
     }
 
     .heading-span {
-        font-size: calc(21px + (50 + 50 * 0.7) * ((100vw - 320px) / 1920));
+        font-size: calc(21px + (29 + 29 * 0.7) * ((100vw - 320px) / 1920));
     }
 
     .nav-menu__item {
-        font-size: calc(15px + (20 + 20 * 0.7) * ((100vw - 320px) / 1920));
+        font-size: calc(15px + (5 + 5 * 0.7) * ((100vw - 320px) / 1920));
     }
 
     .offer-title__span_name {
-        font-size: calc(36px + (87 + 87 * 0.7) * ((100vw - 320px) / 1920));
+        font-size: calc(36px + (51 + 51 * 0.7) * ((100vw - 320px) / 1920));
     }
 
     .container {
