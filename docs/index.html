@@ -25,15 +25,15 @@
 </head>
 <body>
 	<div class="wrapper">
-		<header class="header">
+		<header class="header animate__animated animate__fadeInDown">
 			<div class="container">
 				<div class="nav-wrapper">
 					<nav class="nav-menu">
 						<a href="#" class="nav-menu__item">Главная</a>
-						<a href="#" class="nav-menu__item">Моя история</a>
+						<a href="#" class="nav-menu__item">Кто я</a>
 						<a href="#" class="nav-menu__item">Мои проекты</a>
-						<a href="#" class="nav-menu__item">Чему вы научитесь</a>
-						<a href="#" class="nav-menu__item">Программа занятий</a>
+						<a href="#" class="nav-menu__item">Чему ты научишься</a>
+						<a href="#" class="nav-menu__item">Программа треннинга</a>
 						<a href="#" class="nav-menu__item">Связь со мной</a>
 					</nav>
 					<div class="nav-media">
@@ -54,9 +54,9 @@
 						<div class="container">
 							<div class="content-wrapper">
 								<div class="offer">
-									<div class="offer__heading offer-heading">
-										<span class="offer-title__span offer-title__span_busines">Бизнес</span>
-										<h1 class="offer-heading__title offer-title">
+									<div class="offer__heading offer-heading" data-swiper-parallax-x="-30%">
+										<span class="offer-title__span offer-title__span_busines animate__animated animate__bounceInDown">Бизнес</span>
+										<h1 class="offer-heading__title offer-title animate__animated animate__bounceIn">
 											Как построить
 											<span class="offer-title__span heading-span">онлайн/офлайн</span> <br>
 											из любой точки мира
@@ -64,7 +64,7 @@
 											<span class="offer-title__span offer-title__span_name">Иванова Ильи</span>
 										</h1>
 									</div>
-									<ul class="offer__description offer-description">
+									<ul class="offer__description offer-description animate__animated animate__fadeIn" data-swiper-parallax-x="30%">
 										<li class="offer-description__item">
 											1. Ты научишься считать прибыльность, издержки и узнаешь как не прогореть;
 										</li>
@@ -89,7 +89,7 @@
 											<span class="offer-title__span offer-title__span_name">Иванова Ильи</span>
 										</h1>
 									</div>
-									<div class="swiper">
+									<div class="offer-mobile__slider swiper">
 										<div class="swiper-wrapper">
 										  <div class="swiper-slide">
 											<ul class="offer-description_mobile">
@@ -113,7 +113,7 @@
 										  </div>
 										</div>
 										<div class="scrollbar"></div>
-									  </div>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -141,7 +141,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="section__pagination"></div>
+			<div class="section__pagination animate__animated animate__fadeInRight"></div>
 		</main>
 	</div>
 	<script src="js/jquery-3.6.0.min.js"></script>

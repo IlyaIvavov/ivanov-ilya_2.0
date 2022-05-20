@@ -442,8 +442,13 @@ button:focus {
 /* Custom Cursor */
 
 
+/* Animation */
 
-/* CSS Animation */
+.animate__animated.animate__fadeIn {
+    --animate-duration: 2s;
+}
+
+/* Adaptive */
 
 @media (max-width: 767px) {
     h1, h2 {
