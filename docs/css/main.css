@@ -263,6 +263,21 @@ button:hover {
     justify-content: center;
 }
 
+.scrollbar {
+    width: 95%;
+    height: 2px;
+    margin-top: 13px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+
+.scrollbar-drag {
+    width: 339.5px;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+
 /* Nav */
 
 .header {
@@ -390,21 +405,6 @@ button:hover {
 .offer-mobile__slider {
     width: calc(100vw - 32px);
     height: auto;
-}
-
-.scrollbar {
-    width: 95%;
-    height: 2px;
-    margin-top: 13px;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 10px;
-}
-
-.scrollbar-drag {
-    width: 339.5px;
-    height: 2px;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 10px;
 }
 
 .offer-description_mobile {
