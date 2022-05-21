@@ -74,17 +74,7 @@ pageSlider.init();
 
 // Mobile Swipers
 
-let firstMobSlider = new Swiper('.offer-mobile__slider', {
-	scrollbar: {
-		el: '.scrollbar',
-		dragClass: 'scrollbar-drag',
-		draggable: true,
-	},
-	grabCursor: true,
-	spaceBetween: 16,
-});
-
-let secondMobSlider = new Swiper('.projects-mobile-slider', {
+let firstMobSlider = new Swiper('.projects-mobile-slider', {
 	scrollbar: {
 		el: '.scrollbar',
 		dragClass: 'scrollbar-drag',
