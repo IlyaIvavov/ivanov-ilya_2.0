@@ -329,12 +329,12 @@ button:hover {
 .nav-media a {
     margin-left: 33px;
     display: flex;
-    opacity: 30%;
+    opacity: 50%;
     transition: all 0.3s ease-in;
 }
 
 .nav-media a:hover {
-    opacity: 60%;
+    opacity: 80%;
     transition: all 0.3s ease-out;
 }
 
@@ -648,7 +648,47 @@ button:hover {
 
 /* Contact */
 
+.contact__title {
+    margin-bottom: 24px;
+}
 
+.contact-description {
+  position: relative;
+  padding-left: 13px;
+  max-width: 763px;
+}
+
+.contact-description::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.2);
+    width: 2px;
+    height: 100%; 
+}
+
+.contact-description__media {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 13px;
+}
+
+.contact-description__media a {
+    display: flex;
+    opacity: 30%;
+    transition: all 0.3s ease-in;
+}
+
+.contact-description__media a:not(:last-child) {
+    margin-right: 33px;
+}
+
+.contact-description__media a:hover {
+    opacity: 60%;
+    transition: all 0.3s ease-out;
+}
 
 /* Custom Cursor */
 
