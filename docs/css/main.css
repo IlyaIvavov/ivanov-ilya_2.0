@@ -375,6 +375,10 @@ button:hover {
     color: rgba(255, 255, 255, 0.5);
 }
 
+.offer-title__span_mobile {
+    display: none;
+}
+
 .offer-description {
     position: relative;
     display: flex;
@@ -383,38 +387,6 @@ button:hover {
 }
 
 .offer-description::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 2px;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.2);
-}
-
-/* Offer-mobile */
-
-.offer-mobile {
-    display: none;
-}
-
-.offer-heading_mobile {
-    margin-bottom: 13px;
-}
-
-.offer-mobile__slider {
-    width: calc(100vw - 32px);
-    height: auto;
-}
-
-.offer-description_mobile {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    padding-left: 16px;
-}
-
-.offer-description_mobile::before {
     content: '';
     position: absolute;
     top: 0;
@@ -546,6 +518,124 @@ button:hover {
 
 /* Learning */
 
+.tooltip-wrapper-desktop {
+    display: flex;
+    margin-top: 33px;
+}
+
+.learning-wrapper__title {
+    margin-bottom: 33px;
+}
+
+.tooltip-list{
+    max-width: 810px;
+    margin-right: 33px;
+}
+
+.tooltip-list__item {
+    font-weight: 300;
+    position: relative;
+    color: rgba(255, 255, 255, 0.4);
+    padding: 13px 20px;
+    margin-bottom: -2px !important;
+    cursor: pointer;
+    transition: color 0.3s ease-in;
+}
+
+.tooltip-list__item::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.2);
+    width: 100%;
+    height: 2px;
+    transition: all 0.3s ease-in;
+}
+
+.tooltip-list__item::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.2);
+    width: 100%;
+    height: 2px;
+    transition: all 0.3s ease-in;
+}
+
+.tooltip-list__item.active {
+    cursor: default;
+    color: rgba(255, 255, 255, 1);
+    transition: color 0.3s ease-in;
+}
+
+.tooltip-list__item.active:hover {
+    color: rgba(255, 255, 255, 1);
+    transition: color 0.3s ease-out;
+}
+
+.tooltip-list__item.active::after{
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.tooltip-list__item.active::before  {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.tooltip-list__item:hover {
+    transition: color 0.3s ease-out;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.tooltip-list__item:hover::after {
+    transition: all 0.3s ease-out;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.tooltip-list__item:hover::before {
+    transition: all 0.3s ease-out;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.tooltip-content-item {
+    display: none;
+}
+
+.tooltip-content-item.active {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    padding-left: 16px;
+    max-width: 700px;
+
+    animation-name: tooltip;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in;
+}
+
+.tooltip-content-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.2);
+    width: 2px;
+    height: 100%;
+}
+
+.tooltip-content-item__heading {
+    font-weight: 400;
+    margin-bottom: 3px !important;
+}
+
+.tooltip-content-item__description {
+    font-weight: 200;
+}
+
+/* Learning Mobile */
+
 
 
 /* Bonuses */
@@ -568,6 +658,18 @@ button:hover {
 .animate__animated.animate__fadeIn {
     --animate-duration: 2s;
 }
+
+@keyframes tooltip {
+    0% {
+        top: -33px;
+        opacity: 0%;
+    }
+    100% {
+        top: 0px;
+        opacity: 100%;
+    }
+}
+
 
 /* Adaptive */
 
@@ -672,17 +774,20 @@ button:hover {
         flex-direction: unset !important;
     }
 
-    .offer {
+    .offer-heading {
+        left: 0;
+    }
+
+    .offer-title__span_busines {
         display: none;
     }
 
-    .offer-mobile {
-        display: block;
+    .offer-title__span_desktop {
+        display: none;
     }
 
-    .offer-title_mobile {
-        display: flex;
-        flex-direction: column;
+    .offer-title__span_mobile {
+        display: block;
     }
 
     /* Projects */
@@ -697,5 +802,16 @@ button:hover {
 
     .projects-name {
         margin-bottom: 23px;
+    }
+
+    /* Learning */
+
+    .tooltip-wrapper-desktop {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .tooltip-list {
+        margin-right: 0;
     }
 }

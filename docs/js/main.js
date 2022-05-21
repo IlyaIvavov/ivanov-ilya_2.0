@@ -93,3 +93,15 @@ let secondMobSlider = new Swiper('.projects-mobile-slider', {
 	grabCursor: true,
 	spaceBetween: 16,
 });
+
+// Toggle Tooltip
+
+$('.tooltip-list__item').click(function() {
+	let currTab = $(this).index();
+
+	$('.tooltip-list__item').removeClass('active');
+	$(this).addClass('active');
+
+	$('.tooltip-content-item').removeClass('active');
+	$('.tooltip-content-item').eq(currTab).addClass('active');
+})
