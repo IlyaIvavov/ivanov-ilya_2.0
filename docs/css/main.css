@@ -637,7 +637,6 @@ button:hover {
 /* Learning Mobile */
 
 
-
 /* Bonuses */
 
 
@@ -706,6 +705,17 @@ button:hover {
     }
     100% {
         top: 0px;
+        opacity: 100%;
+    }
+}
+
+@keyframes tooltip-mobile {
+    0% {
+        left: -33px;
+        opacity: 0%;
+    }
+    100% {
+        left: 0px;
         opacity: 100%;
     }
 }
@@ -845,13 +855,21 @@ button:hover {
     }
 
     /* Learning */
-
+    
     .tooltip-wrapper-desktop {
-        display: flex;
         flex-direction: column;
     }
 
     .tooltip-list {
-        margin-right: 0;
+        margin-right: 0px;
+        margin-bottom: 23px;
+        height: 300px;
+        overflow-y: scroll;
+    }
+
+    .tooltip-content-item.active {
+        animation-name: tooltip-mobile;
+        animation-duration: 0.3s;
+        animation-timing-function: ease-in;
     }
 }
