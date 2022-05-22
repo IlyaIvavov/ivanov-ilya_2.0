@@ -98,12 +98,22 @@ let secondMobSlider = new Swiper('.swiper', {
 
 // Toggle Tooltip
 
-$('.tooltip-list__item').click(function(e) {
-	e.preventDefault();
+$('.tooltip-list__item').click(function (e) {
+	let currTab = $(this).index();
 
 	$('.tooltip-list__item').removeClass('active');
-	$('.tooltip-content-item').removeClass('active');
-
 	$(this).addClass('active');
-	$($(this).attr('href')).addClass('active');
-})
+
+	$('.tooltip-content-item').removeClass('active');
+	$('.tooltip-content-item').eq(currTab).addClass('active');
+});
+
+$('.tooltip-list__item_bonuses').click(function (e) {
+	let currTab = $(this).index();
+
+	$('.tooltip-list__item_bonuses').removeClass('active');
+	$(this).addClass('active');
+
+	$('.tooltip-content-item_bonuses').removeClass('active');
+	$('.tooltip-content-item_bonuses').eq(currTab).addClass('active');
+});

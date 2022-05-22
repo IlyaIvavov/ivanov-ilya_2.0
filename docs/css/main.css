@@ -520,11 +520,10 @@ button:hover {
 
 .tooltip-wrapper {
     display: flex;
-    margin-top: 33px;
 }
 
 .learning-wrapper__title {
-    margin-bottom: 33px;
+    margin-bottom: 23px;
 }
 
 .tooltip-list{
@@ -533,7 +532,6 @@ button:hover {
 }
 
 .tooltip-list__item {
-    display: block;
     font-weight: 300;
     position: relative;
     color: rgba(255, 255, 255, 0.4);
@@ -639,12 +637,119 @@ button:hover {
     display: none;
 }
 
-/* Learning Mobile */
-
 
 /* Bonuses */
 
+.bonuses-wrapper__title {
+    margin-bottom: 23px;
+}
 
+.tooltip-list_bonuses  {
+    max-width: 810px;
+    margin-right: 33px;
+}
+
+.tooltip-list__item_bonuses {
+    font-weight: 300;
+    position: relative;
+    color: rgba(255, 255, 255, 0.4);
+    padding: 13px 20px;
+    margin-bottom: -2px !important;
+    cursor: pointer;
+    transition: color 0.3s ease-in;
+}
+
+.tooltip-list__item_bonuses::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.2);
+    width: 100%;
+    height: 2px;
+    transition: all 0.3s ease-in;
+}
+
+.tooltip-list__item_bonuses::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.2);
+    width: 100%;
+    height: 2px;
+    transition: all 0.3s ease-in;
+}
+
+.tooltip-list__item_bonuses.active {
+    cursor: default;
+    color: rgba(255, 255, 255, 1);
+    transition: color 0.3s ease-in;
+}
+
+.tooltip-list__item_bonuses.active:hover {
+    color: rgba(255, 255, 255, 1);
+    transition: color 0.3s ease-out;
+}
+
+.tooltip-list__item_bonuses.active::after{
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.tooltip-list__item_bonuses.active::before  {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.tooltip-list__item_bonuses:hover {
+    transition: color 0.3s ease-out;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.tooltip-list__item_bonuses:hover::after {
+    transition: all 0.3s ease-out;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.tooltip-list__item_bonuses:hover::before {
+    transition: all 0.3s ease-out;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.tooltip-content-item_bonuses {
+    display: none;
+}
+
+.tooltip-content-item_bonuses.active {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    padding-left: 16px;
+    max-width: 700px;
+
+    animation-name: tooltip;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in;
+}
+
+.tooltip-content-item_bonuses::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.2);
+    width: 2px;
+    height: 100%;
+}
+
+.tooltip-content-item__heading {
+    font-weight: 400;
+    margin-bottom: 3px !important;
+}
+
+.tooltip-content-item__description {
+    font-weight: 200;
+}
 
 /* Program */
 
@@ -891,7 +996,7 @@ button:hover {
     }
 
     .tooltip-list {
-        height: 170px;
+        height: 300px;
         overflow-y: scroll;
         margin-right: 0px;
         margin-bottom: 23px;
@@ -905,8 +1010,28 @@ button:hover {
         height: 1px;
     }
     
-
     .tooltip-content-item.active {
+        animation-name: tooltip-mobile;
+        animation-duration: 0.3s;
+        animation-timing-function: ease-in;
+    }
+
+    /* Bonuses */
+
+    .tooltip-list_bonuses {
+        margin-right: 0px;
+        margin-bottom: 23px;
+    }
+
+    .tooltip-list__item_bonuses::after {
+        height: 1px;
+    }
+    
+    .tooltip-list__item_bonuses::before {
+        height: 1px;
+    }
+    
+    .tooltip-content-item_bonuses.active {
         animation-name: tooltip-mobile;
         animation-duration: 0.3s;
         animation-timing-function: ease-in;
