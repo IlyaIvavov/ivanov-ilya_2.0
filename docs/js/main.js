@@ -7,8 +7,8 @@ let pageSlider = new Swiper('.page', {
 	slidesPerView: 'auto',
 	slidesPerView: true,
 	parallax: true,
-	// simulateTouch: false,
-	freeMode: true,
+	simulateTouch: false,
+	// freeMode: true,
 
 	keyboard: {
 		enabled: true,

@@ -149,10 +149,6 @@ button:hover {
 
 /* Swiper */
 
-.swiper {
-    height: 200px;
-}
-
 .wrapper {
     min-height: 100%;
 }
@@ -524,7 +520,6 @@ button:hover {
 
 .tooltip-wrapper-desktop {
     display: flex;
-    flex-direction: column;
     margin-top: 33px;
 }
 
@@ -535,8 +530,6 @@ button:hover {
 .tooltip-list{
     max-width: 810px;
     margin-right: 33px;
-    height: 200px;
-    overflow-y: scroll;
 }
 
 .tooltip-list__item {
@@ -872,7 +865,7 @@ button:hover {
 
     /* Learning */
 
-    /* .tooltip-wrapper-desktop {
+    .tooltip-wrapper-desktop {
         display: none;
     }
 
@@ -880,5 +873,5 @@ button:hover {
         animation-name: tooltip-mobile;
         animation-duration: 0.3s;
         animation-timing-function: ease-in;
-    } */
+    }
 }
