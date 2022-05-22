@@ -101,10 +101,27 @@ let firstMobSlider = new Swiper('.projects-slider', {
 		draggable: true,
 	},
 	grabCursor: true,
-	spaceBetween: 16,
 });
 
 let secondSlider = new Swiper('.programm-slider', {
+	slidesPerView: true,
+	slidesPerView: '3',
+
+	breakpoints: {
+		320: {
+			slidesPerView: 1,
+			spaceBetween: 16,
+		},
+		880: {
+			slidesPerView: 2,
+			spaceBetween: 0,
+		},
+		1260: {
+			slidesPerView: 3,
+			spaceBetween: 16,
+		},
+	},
+
 	scrollbar: {
 		el: '.scrollbar',
 		dragClass: 'scrollbar-drag',

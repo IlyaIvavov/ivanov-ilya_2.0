@@ -264,7 +264,7 @@ button:hover {
 }
 
 .scrollbar {
-    height: 2px;
+    height: 3px;
     margin-top: 13px;
     background: rgba(255, 255, 255, 0.2);
     border-radius: 10px;
@@ -272,7 +272,7 @@ button:hover {
 
 .scrollbar-drag {
     width: 339.5px;
-    height: 2px;
+    height: 3px;
     background: rgba(255, 255, 255, 0.2);
     border-radius: 10px;
 }
@@ -513,7 +513,7 @@ button:hover {
 }
 
 .projects-slider {
-    max-width: 1085px;
+    width: 1085px;
     height: auto;
     overflow: hidden;
 }
@@ -760,7 +760,7 @@ button:hover {
 }
 
 .programm-slider {
-    max-width: 1085px;
+    width: 1112px;
     height: auto;
     overflow: hidden;
 }
@@ -910,10 +910,16 @@ button:hover {
         top: 0;
     }
 
-    /* Projects */
+     /* Projects */
 
     .projects-slider {
-        width: 90vw;
+        width: 80vw;
+    }
+
+    /* Programm */
+
+    .programm-slider {
+        width: 80vw;
     }
 
 }
@@ -981,7 +987,7 @@ button:hover {
     /* Projects */
 
     .projects-slider {
-        width: calc(100vw - 32px);
+        width: calc(100vw - 2.5%);
     }
 
     .projects-name {
@@ -1053,7 +1059,7 @@ button:hover {
     /* Programm */
 
     .programm-slider {
-        width: calc(100vw - 32px);
+        width: calc(100vw - 2.5%);
         height: auto;
     }
 }
