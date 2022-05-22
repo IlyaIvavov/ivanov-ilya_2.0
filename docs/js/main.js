@@ -8,6 +8,7 @@ let pageSlider = new Swiper('.page', {
 	slidesPerView: true,
 	parallax: true,
 	simulateTouch: false,
+	allowTouchMove: false,
 	// freeMode: true,
 
 	keyboard: {
@@ -16,9 +17,9 @@ let pageSlider = new Swiper('.page', {
 		pageUpDown: true,
 	},
 
-	mousewheel: {
-		sensitivity: 1,
-	},
+	// mousewheel: {
+	// 	sensitivity: 1,
+	// },
 
 	watchOverflow: true,
 	speed: 800,
@@ -86,14 +87,24 @@ let firstMobSlider = new Swiper('.projects-mobile-slider', {
 	spaceBetween: 16,
 });
 
+let secondMobSlider = new Swiper('.swiper', {
+
+	scrollbar: {
+		el: '.scrollbar',
+		draggable: true,
+	},
+	grabCursor: true,
+	spaceBetween: 16,
+});
+
 // Toggle Tooltip
 
-$('.tooltip-list__item').click(function() {
-	let currTab = $(this).index();
+$('.tooltip-list__item').click(function(e) {
+	e.preventDefault();
 
 	$('.tooltip-list__item').removeClass('active');
-	$(this).addClass('active');
-
 	$('.tooltip-content-item').removeClass('active');
-	$('.tooltip-content-item').eq(currTab).addClass('active');
+
+	$(this).addClass('active');
+	$($(this).attr('href')).addClass('active');
 })

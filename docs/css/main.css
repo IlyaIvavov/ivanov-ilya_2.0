@@ -533,6 +533,7 @@ button:hover {
 }
 
 .tooltip-list__item {
+    display: block;
     font-weight: 300;
     position: relative;
     color: rgba(255, 255, 255, 0.4);
@@ -729,7 +730,6 @@ button:hover {
     }
 }
 
-
 /* Adaptive */
 
 @media (max-width: 1200px) {
@@ -863,10 +863,17 @@ button:hover {
         margin-bottom: 23px;
     }
 
-    /* Learning */
+    /* Learning */ 
 
     .tooltip-wrapper-desktop {
-        display: none;
+        flex-direction: column;
+    }
+
+    .tooltip-list {
+        height: 200px;
+        overflow-y: scroll;
+        margin-right: 0px;
+        margin-bottom: 33px;
     }
 
     .tooltip-content-item.active {
