@@ -111,7 +111,6 @@ let secondSlider = new Swiper('.programm-slider', {
 		draggable: true,
 	},
 	grabCursor: true,
-	spaceBetween: 16,
 });
 
 // Toggle Tooltip

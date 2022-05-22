@@ -264,7 +264,6 @@ button:hover {
 }
 
 .scrollbar {
-    width: 95%;
     height: 2px;
     margin-top: 13px;
     background: rgba(255, 255, 255, 0.2);
@@ -276,6 +275,75 @@ button:hover {
     height: 2px;
     background: rgba(255, 255, 255, 0.2);
     border-radius: 10px;
+}
+
+ /* Second Slider */
+
+ .slide-content-wrapper__col:not(:last-child) {
+    margin-right: 33px;
+}
+
+.slide-content-name {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-left: 13px;
+    margin-bottom: 33px;
+}
+
+.slide-content-name::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.2);
+    width: 2px;
+    height: 100%;
+}
+
+.slide-content-name__title {
+    font-weight: 400;
+    margin-bottom: 3px;
+}
+
+.slide-content-name__title span {
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.slide-content-name__description {
+    margin-bottom: 3px;
+}
+
+.slide-content-stats {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-left: 13px;
+}
+
+.slide-content-stats::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.2);
+    width: 2px;
+    height: 100%;
+}
+
+.slide-content-stats__title {
+    font-weight: 200;
+    margin-bottom: 5px;
+}
+
+.slide-content-stats__title span {
+    font-weight: 200;
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.slide-content-stats__title_theme {
+    font-weight: 300;
 }
 
 /* Nav */
@@ -442,69 +510,6 @@ button:hover {
 
 .projects-wrapper {
     display: flex;
-}
-
-.slide-content-wrapper__col:not(:last-child) {
-    margin-right: 33px;
-}
-
-.slide-content-name {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    padding-left: 13px;
-    margin-bottom: 33px;
-}
-
-.slide-content-name::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: rgba(255, 255, 255, 0.2);
-    width: 2px;
-    height: 100%;
-}
-
-.slide-content-name__title {
-    font-weight: 400;
-    margin-bottom: 3px;
-}
-
-.slide-content-name__title span {
-    font-weight: 400;
-    color: rgba(255, 255, 255, 0.2);
-}
-
-.slide-content-name__description {
-    margin-bottom: 3px;
-}
-
-.slide-content-stats {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    padding-left: 13px;
-}
-
-.slide-content-stats::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: rgba(255, 255, 255, 0.2);
-    width: 2px;
-    height: 100%;
-}
-
-.slide-content-stats__title {
-    font-weight: 200;
-    margin-bottom: 5px;
-}
-
-.slide-content-stats__title span {
-    font-weight: 200;
-    color: rgba(255, 255, 255, 0.2);
 }
 
 .projects-slider {
@@ -757,6 +762,7 @@ button:hover {
 .programm-slider {
     max-width: 1085px;
     height: auto;
+    overflow: hidden;
 }
 
 /* Contact */
