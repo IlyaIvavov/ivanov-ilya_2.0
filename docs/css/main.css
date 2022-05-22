@@ -863,7 +863,7 @@ button:hover {
     .tooltip-list {
         margin-right: 0px;
         margin-bottom: 23px;
-        height: 300px;
+        height: 200px;
         overflow-y: scroll;
     }
 
