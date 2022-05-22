@@ -518,7 +518,7 @@ button:hover {
 
 /* Learning */
 
-.tooltip-wrapper-desktop {
+.tooltip-wrapper {
     display: flex;
     margin-top: 33px;
 }
@@ -635,13 +635,8 @@ button:hover {
     font-weight: 200;
 }
 
-.projects-mobile-slider {
+.tooltip-wrapper__mobile-tooltip {
     display: none;
-}
-
-.projects-mobile-slider {
-    width: calc(100vw - 32px);
-    height: auto;
 }
 
 /* Learning Mobile */
@@ -727,6 +722,18 @@ button:hover {
     100% {
         left: 0px;
         opacity: 100%;
+    }
+}
+
+@keyframes help-tooltip-mobile {
+    0% {
+        top: 6px;
+    }
+    50% {
+        top: 0px;
+    }
+    100% {
+        top: 6px;
     }
 }
 
@@ -865,16 +872,39 @@ button:hover {
 
     /* Learning */ 
 
-    .tooltip-wrapper-desktop {
+    .tooltip-wrapper {
         flex-direction: column;
     }
 
+    .tooltip-wrapper__mobile-tooltip {
+        position: relative;
+        display: block;
+        font-size: 16px;
+        font-weight: 200;
+        margin-bottom: 23px;
+        color: rgba(255, 255, 255, 0.2);
+
+        animation-name: help-tooltip-mobile;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+        animation-iteration-count: infinite;
+    }
+
     .tooltip-list {
-        height: 200px;
+        height: 170px;
         overflow-y: scroll;
         margin-right: 0px;
-        margin-bottom: 33px;
+        margin-bottom: 23px;
     }
+
+    .tooltip-list__item::after {
+        height: 1px;
+    }
+    
+    .tooltip-list__item::before {
+        height: 1px;
+    }
+    
 
     .tooltip-content-item.active {
         animation-name: tooltip-mobile;

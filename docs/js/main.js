@@ -9,7 +9,6 @@ let pageSlider = new Swiper('.page', {
 	parallax: true,
 	simulateTouch: false,
 	allowTouchMove: false,
-	// freeMode: true,
 
 	keyboard: {
 		enabled: true,
@@ -17,9 +16,9 @@ let pageSlider = new Swiper('.page', {
 		pageUpDown: true,
 	},
 
-	// mousewheel: {
-	// 	sensitivity: 1,
-	// },
+	mousewheel: {
+		sensitivity: 1,
+	},
 
 	watchOverflow: true,
 	speed: 800,
