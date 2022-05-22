@@ -149,6 +149,10 @@ button:hover {
 
 /* Swiper */
 
+.swiper {
+    height: 200px;
+}
+
 .wrapper {
     min-height: 100%;
 }
@@ -520,6 +524,7 @@ button:hover {
 
 .tooltip-wrapper-desktop {
     display: flex;
+    flex-direction: column;
     margin-top: 33px;
 }
 
@@ -530,6 +535,8 @@ button:hover {
 .tooltip-list{
     max-width: 810px;
     margin-right: 33px;
+    height: 200px;
+    overflow-y: scroll;
 }
 
 .tooltip-list__item {
@@ -632,6 +639,15 @@ button:hover {
 
 .tooltip-content-item__description {
     font-weight: 200;
+}
+
+.projects-mobile-slider {
+    display: none;
+}
+
+.projects-mobile-slider {
+    width: calc(100vw - 32px);
+    height: auto;
 }
 
 /* Learning Mobile */
@@ -855,21 +871,14 @@ button:hover {
     }
 
     /* Learning */
-    
-    .tooltip-wrapper-desktop {
-        flex-direction: column;
-    }
 
-    .tooltip-list {
-        margin-right: 0px;
-        margin-bottom: 23px;
-        height: 200px;
-        overflow-y: scroll;
+    /* .tooltip-wrapper-desktop {
+        display: none;
     }
 
     .tooltip-content-item.active {
         animation-name: tooltip-mobile;
         animation-duration: 0.3s;
         animation-timing-function: ease-in;
-    }
+    } */
 }
