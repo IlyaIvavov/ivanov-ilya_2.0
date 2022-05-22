@@ -763,6 +763,64 @@ button:hover {
     width: 1112px;
     height: auto;
     overflow: hidden;
+    margin-bottom: 43px;
+}
+
+.programm-info-details {
+    position: relative;
+    display: flex;
+    padding-left: 13px;
+    margin-bottom: 13px;
+}
+
+.programm-info-details li {
+    margin: 0;
+}
+
+.programm-info-details li:not(:last-child) {
+    margin-right: 23px;
+}
+
+.programm-info-details::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.2);
+    width: 2px;
+    height: 100%; 
+}
+
+.programm-info-price li {
+    margin: 0;
+}
+
+.programm-info-price li:not(:last-child) {
+    margin-right: 23px;
+}
+
+.programm-info-price {
+    position: relative;
+    display: flex;
+    padding-left: 13px;
+}
+
+.programm-info-price::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.2);
+    width: 2px;
+    height: 100%; 
+}
+
+.programm-info-details__item span {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.programm-info-price__item span {
+    color: rgba(255, 255, 255, 0.4);
 }
 
 /* Contact */
@@ -920,6 +978,24 @@ button:hover {
 
     .programm-slider {
         width: 80vw;
+    }
+
+    .programm-info-details {
+        flex-direction: column;
+        width: calc(100vw - 2.5%);
+    }
+
+    .programm-info-details li:not(:last-child) {
+        margin-bottom: 13px;
+    }
+
+    .programm-info-price {
+        flex-direction: column;
+        width: calc(100vw - 2.5%);
+    }
+
+    .programm-info-price li:not(:last-child) {
+        margin-bottom: 13px;
     }
 
 }
