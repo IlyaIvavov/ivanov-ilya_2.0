@@ -444,11 +444,11 @@ button:hover {
     display: flex;
 }
 
-.projects-wrapper__col:not(:last-child) {
+.slide-content-wrapper__col:not(:last-child) {
     margin-right: 33px;
 }
 
-.projects-name {
+.slide-content-name {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -456,7 +456,7 @@ button:hover {
     margin-bottom: 33px;
 }
 
-.projects-name::before {
+.slide-content-name::before {
     content: '';
     position: absolute;
     top: 0;
@@ -466,28 +466,28 @@ button:hover {
     height: 100%;
 }
 
-.projects-name__title {
+.slide-content-name__title {
     font-weight: 400;
     margin-bottom: 3px;
 }
 
-.projects-name__title span {
+.slide-content-name__title span {
     font-weight: 400;
     color: rgba(255, 255, 255, 0.2);
 }
 
-.projects-name__description {
+.slide-content-name__description {
     margin-bottom: 3px;
 }
 
-.projects-stats {
+.slide-content-stats {
     position: relative;
     display: flex;
     flex-direction: column;
     padding-left: 13px;
 }
 
-.projects-stats::before {
+.slide-content-stats::before {
     content: '';
     position: absolute;
     top: 0;
@@ -497,23 +497,20 @@ button:hover {
     height: 100%;
 }
 
-.projects-stats__title {
+.slide-content-stats__title {
     font-weight: 200;
     margin-bottom: 5px;
 }
 
-.projects-stats__title span {
+.slide-content-stats__title span {
     font-weight: 200;
     color: rgba(255, 255, 255, 0.2);
 }
 
-.projects-mobile-slider {
-    display: none;
-}
-
-.projects-mobile-slider {
-    width: calc(100vw - 32px);
+.projects-slider {
+    max-width: 1085px;
     height: auto;
+    overflow: hidden;
 }
 
 /* Learning */
@@ -751,9 +748,16 @@ button:hover {
     font-weight: 200;
 }
 
-/* Program */
+/* Programm */
 
+.programm-wrapper__title {
+    margin-bottom: 23px;
+}
 
+.programm-slider {
+    max-width: 1085px;
+    height: auto;
+}
 
 /* Contact */
 
@@ -899,6 +903,13 @@ button:hover {
     .mobile-burger::after {
         top: 0;
     }
+
+    /* Projects */
+
+    .projects-slider {
+        width: 90vw;
+    }
+
 }
 
 @media (max-width: 767px) {
@@ -963,12 +974,8 @@ button:hover {
 
     /* Projects */
 
-    .projects-wrapper {
-        display: none;
-    }
-
-    .projects-mobile-slider {
-        display: block;
+    .projects-slider {
+        width: calc(100vw - 32px);
     }
 
     .projects-name {
@@ -1035,5 +1042,12 @@ button:hover {
         animation-name: tooltip-mobile;
         animation-duration: 0.3s;
         animation-timing-function: ease-in;
+    }
+
+    /* Programm */
+
+    .programm-slider {
+        width: calc(100vw - 32px);
+        height: auto;
     }
 }

@@ -4,8 +4,8 @@ let pageSlider = new Swiper('.page', {
 	wrapperClass: "section__wrapper",
 	slideClass: "screen",
 	direction: 'vertical',
-	slidesPerView: 'auto',
 	slidesPerView: true,
+	slidesPerView: 'auto',
 	parallax: true,
 	simulateTouch: false,
 	allowTouchMove: false,
@@ -76,7 +76,25 @@ pageSlider.init();
 
 // Mobile Swipers
 
-let firstMobSlider = new Swiper('.projects-mobile-slider', {
+let firstMobSlider = new Swiper('.projects-slider', {
+	slidesPerView: true,
+	slidesPerView: '3',
+
+	breakpoints: {
+		320: {
+			slidesPerView: 1,
+			spaceBetween: 16,
+		},
+		1090: {
+			slidesPerView: 2,
+			spaceBetween: 0,
+		},
+		1230: {
+			slidesPerView: 3,
+			spaceBetween: 16,
+		},
+	},
+
 	scrollbar: {
 		el: '.scrollbar',
 		dragClass: 'scrollbar-drag',
@@ -86,10 +104,10 @@ let firstMobSlider = new Swiper('.projects-mobile-slider', {
 	spaceBetween: 16,
 });
 
-let secondMobSlider = new Swiper('.swiper', {
-
+let secondSlider = new Swiper('.programm-slider', {
 	scrollbar: {
 		el: '.scrollbar',
+		dragClass: 'scrollbar-drag',
 		draggable: true,
 	},
 	grabCursor: true,
