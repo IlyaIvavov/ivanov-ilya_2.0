@@ -971,18 +971,18 @@ button:hover {
      /* Projects */
 
     .projects-slider {
-        width: 80vw;
+        width: 90vw;
     }
 
     /* Programm */
 
     .programm-slider {
-        width: 80vw;
+        width: 90vw;
     }
 
     .programm-info-details {
         flex-direction: column;
-        width: calc(100vw - 2.5%);
+
     }
 
     .programm-info-details li:not(:last-child) {
@@ -991,7 +991,6 @@ button:hover {
 
     .programm-info-price {
         flex-direction: column;
-        width: calc(100vw - 2.5%);
     }
 
     .programm-info-price li:not(:last-child) {
@@ -1036,6 +1035,12 @@ button:hover {
         width: 92vw;
     }
 
+    /* Slider */
+
+    .slide-content-name {
+        margin-bottom: 13px;
+    }
+
     /* Offer */
 
     .section__pagination {
@@ -1062,10 +1067,6 @@ button:hover {
 
     /* Projects */
 
-    .projects-slider {
-        width: calc(100vw - 2.5%);
-    }
-
     .projects-name {
         margin-bottom: 23px;
     }
@@ -1091,7 +1092,7 @@ button:hover {
     }
 
     .tooltip-list {
-        height: 300px;
+        height: 200px;
         overflow-y: scroll;
         margin-right: 0px;
         margin-bottom: 23px;
@@ -1135,7 +1136,6 @@ button:hover {
     /* Programm */
 
     .programm-slider {
-        width: calc(100vw - 2.5%);
-        height: auto;
+        margin-bottom: 23px;
     }
 }
