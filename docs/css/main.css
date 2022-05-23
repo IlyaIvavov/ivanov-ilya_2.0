@@ -416,6 +416,10 @@ button:hover {
     background: rgba(255, 255, 255, 0.2);
 }
 
+.mobile-nav {
+    display: none;
+}
+
 /* Offer */
 
 .offer-heading {
@@ -911,6 +915,10 @@ button:hover {
 
     .desktop-nav {
         display: none;
+    }
+
+    .mobile-nav {
+        display: block;
     }
 
     .burger {
