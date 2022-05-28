@@ -358,11 +358,7 @@ button:hover {
 
 .nav-wrapper {
     position: relative;
-    display: none;
-
-    animation-name: burger-menu-out;
-    animation-duration: 0.3s;
-    animation-timing-function: ease;
+    display: flex;
 }
 
 .nav-menu {
@@ -895,7 +891,6 @@ button:hover {
     }
 }
 
-
 @keyframes tooltip {
     0% {
         top: -33px;
@@ -982,6 +977,14 @@ button:hover {
     .burger.active::after {
         background: #000;
         transition: all 0.3s ease-in;
+    }
+
+    .nav-wrapper {
+        display: none;
+
+        animation-name: burger-menu-out;
+        animation-duration: 0.3s;
+        animation-timing-function: ease;
     }
 
     .nav-wrapper.active {
