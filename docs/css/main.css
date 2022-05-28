@@ -357,8 +357,12 @@ button:hover {
 }
 
 .nav-wrapper {
-    display: flex;
-    align-items: center;
+    position: relative;
+    display: none;
+
+    animation-name: burger-menu-out;
+    animation-duration: 0.3s;
+    animation-timing-function: ease;
 }
 
 .nav-menu {
@@ -869,6 +873,29 @@ button:hover {
     --animate-duration: 2s;
 }
 
+@keyframes burger-menu-in {
+    0% {
+        top: -33px;
+        opacity: 0%;
+    }
+    100% {
+        top: 0px;
+        opacity: 100%;
+    }
+}
+
+@keyframes burger-menu-out {
+    0% {
+        top: 0px;
+        opacity: 100%;
+    }
+    100% {
+        top: -100px;
+        opacity: 0%;
+    }
+}
+
+
 @keyframes tooltip {
     0% {
         top: -33px;
@@ -957,7 +984,7 @@ button:hover {
         transition: all 0.3s ease-in;
     }
 
-    .nav-wrapper {
+    .nav-wrapper.active {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -965,6 +992,10 @@ button:hover {
         background: #000;
         backdrop-filter: blur(41.0257px);
         border-radius: 5px;
+
+        animation-name: burger-menu-in;
+        animation-duration: 0.3s;
+        animation-timing-function: ease;
     }
 
     .nav-menu {

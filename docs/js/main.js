@@ -74,6 +74,12 @@ function menuSliderRemove() {
 
 pageSlider.init();
 
+// Mobile Menu Burger
+
+$('.burger').click(function (e) {
+	$('.burger, .nav-wrapper').toggleClass('active');
+})
+
 // Mobile Swipers
 
 let firstMobSlider = new Swiper('.projects-slider', {
